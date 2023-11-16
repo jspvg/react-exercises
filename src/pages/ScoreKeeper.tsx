@@ -13,7 +13,12 @@ Requirements:
 import { useEffect, useState } from "react";
 
 const ScoreKeeper = () => {
-  const [score, setScore] = useState(0);
+  const initialScore = parseInt(localStorage.getItem("score") || "0");
+  const [score, setScore] = useState(initialScore);
+
+  useEffect(() => {
+    localStorage.setItem("score", score.toString());
+  }, [score]);
 
   return (
     <div>
