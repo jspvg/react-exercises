@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import ColorRenderer from "../pages/ColorRenderer";
+import SimpleCalculator from "../pages/SimpleCalculator";
 import PixelArt from "../pages/PixelArt";
 import ColorPicker from "../pages/ColorPicker";
 import ToggleWindowEvent from "../pages/ToggleWindowEvent";
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="*" element={<Home />} />
         <Route path="/color-renderer" element={<ColorRenderer />} />
+        <Route path="/simple-calculator" element={<SimpleCalculator />} />
         <Route path="/pixel-art" element={<PixelArt />} />
         <Route path="/color-picker" element={<ColorPicker />} />
         <Route path="/window-event" element={<ToggleWindowEvent />} />
