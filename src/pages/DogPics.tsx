@@ -1,11 +1,3 @@
-/* TASK
-Use a dog picture API to display dog images in React
-Reaquirements:
--Use the dog.ceo to fetch a random dog image and display 
-  that image on page load instead of the hardcoded one there now
--When the dog button is clicked, fetch a new dog image and render it on the UI instead
-*/
-
 import { useEffect, useState } from "react";
 
 type PictureResponse = {
@@ -44,10 +36,23 @@ const DogPics = () => {
   };
 
   return (
-    <div className="dog-pics">
-      <img src={image.message} />
-      <button onClick={handleClick}>🐶</button>
-    </div>
+    <>
+      <h3>TASK</h3>
+      <ul>
+        <li>
+          Use the dog.ceo to fetch a random dog image and display that image on
+          page load instead of the hardcoded one there now
+        </li>
+        <li>
+          When the dog button is clicked, fetch a new dog image and render it on
+          the UI instead
+        </li>
+      </ul>
+      <div className="dog-pics">
+        <img src={image.message} />
+        <button onClick={handleClick}>🐶</button>
+      </div>
+    </>
   );
 };
 

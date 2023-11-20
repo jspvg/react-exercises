@@ -1,10 +1,3 @@
-/* TASK
-Focus an input upon a component mounting
-useRef - for interaction with the actual DOM
-Requirements:
-- Upon page load, focus the input
-*/
-
 import { useEffect, useRef } from "react";
 
 const FocusInput = () => {
@@ -18,8 +11,10 @@ const FocusInput = () => {
 
   return (
     <div>
-      <label htmlFor="focused-input">Focus me on page load!</label>
+      <h3>TASK</h3>
+      <p>Focus the inout upon page load using useRef</p>
       <input id="focused-input" ref={inputRef}></input>
+      <label htmlFor="focused-input">Focus me on page load!</label>
     </div>
   );
 };

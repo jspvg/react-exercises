@@ -1,14 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
-/* TASK 
-Validate a user sign-up form once the user submits the form
-When the form is submitted, validate that the user's information fits the following requirements:
--the email, password, and password confirmation fields are filled in
--the email field must have exactly one @sign in it
--the password must be eight or more characters long
--the password and password confirmation must be the same
-If any of those conditions aren't met, display an error, if they are all met display a sucess message
-*/
 import { useState } from "react";
 
 const FormValidator = () => {
@@ -53,33 +42,49 @@ const FormValidator = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Sign Up!</h2>
-      {error && <p>{error}</p>}
-      {success && <p>{success}</p>}
-      <label htmlFor="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <label htmlFor="password-confirm">Confirm Password </label>
-      <input
-        type="password"
-        id="password-confirm"
-        value={passwordConfirm}
-        onChange={(e) => setPasswordConfirm(e.target.value)}
-      />
-      <input type="submit" value="Submit" />
-    </form>
+    <>
+      <h3>TASK</h3>
+      <p>Validate a user sign-up form once the user submits the form</p>
+      <h4>Requirements</h4>
+      <ul>
+        <li>
+          the email, password, and password confirmation fields are filled in
+        </li>
+        <li>the email field must have exactly one @sign in it</li>
+        <li>the password must be eight or more characters long</li>
+        <li>the password and password confirmation must be the same</li>
+        If any of those conditions aren't met, display an error, if they are all
+        met display a sucess message
+        <li></li>
+      </ul>
+      <form onSubmit={handleSubmit}>
+        <h2>Sign Up!</h2>
+        {error && <p>{error}</p>}
+        {success && <p>{success}</p>}
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <label htmlFor="password-confirm">Confirm Password </label>
+        <input
+          type="password"
+          id="password-confirm"
+          value={passwordConfirm}
+          onChange={(e) => setPasswordConfirm(e.target.value)}
+        />
+        <input type="submit" value="Submit" />
+      </form>
+    </>
   );
 };
 

@@ -60,6 +60,8 @@ const SimpleCalculator = () => {
 
   return (
     <div>
+      <h3>TASK</h3>
+      <p>Implement calculator using useReducer</p>
       <div>
         <h2>{state.num1}</h2>
         {numbers.map((number) => (

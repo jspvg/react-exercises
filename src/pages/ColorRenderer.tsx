@@ -1,9 +1,3 @@
-/* TASK
-Build a color renderer that will display color swatches on a user interface
-Update the ColorRenderer component to display one instance of the 
-Color component for each color in the array of colors
-*/
-
 import Color from "../components/Color";
 
 type Color = {
@@ -30,7 +24,24 @@ const colors: Color[] = [
   },
 ];
 
-const ColorRenderer = () =>
-  colors.map((color) => <Color hex={color.hex} name={color.name} />);
+const ColorRenderer = () => (
+  <>
+    <h3>TASK</h3>
+    <p>
+      Update the ColorRenderer component to display one instance of the Color
+      component for each color in the array of colors
+    </p>
+    {colors.map((color) => (
+      <Color
+        key={color.hex}
+        hex={color.hex}
+        name={color.name}
+        onClick={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
+    ))}
+  </>
+);
 
 export default ColorRenderer;

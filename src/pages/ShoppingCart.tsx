@@ -83,6 +83,11 @@ const ShoppingCart = () => {
 
   return (
     <div>
+      <h3>TASK</h3>
+      <p>
+        Implement basic shopping cart functionalities (add to cart, increment
+        quantity, show total)
+      </p>
       <h1>Shopping Cart</h1>
       <div className="cart">
         <div className="items">
